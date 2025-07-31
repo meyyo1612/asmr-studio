@@ -1,28 +1,4 @@
-"use client"
-
 'use client'
-import { useState, useEffect } from 'react'
-
-export default function ASMRStudio() {
-  const [isRecording, setIsRecording] = useState(false)
-  const [recordingTime, setRecordingTime] = useState(0)
-  const [isPremium, setIsPremium] = useState(false)
-  const [playingSounds, setPlayingSounds] = useState<Set<string>>(new Set())
-  const [dimLights, setDimLights] = useState(false)
-
-  return (
-    <main style={{ padding: 20 }}>
-      <h1>Добре дошъл в ASMR Studio 🎧</h1>
-      <p>Режим: {isRecording ? 'Записва' : 'Спряно'}</p>
-      <p>Премиум: {isPremium ? 'Да' : 'Не'}</p>
-      <p>Време на запис: {recordingTime} секунди</p>
-      <button onClick={() => setIsRecording(!isRecording)}>
-        {isRecording ? 'Спри записа' : 'Започни запис'}
-      </button>
-    </main>
-  )
-}
-
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -41,6 +17,39 @@ import {
   MegaphoneIcon as Echo,
   Sparkles,
 } from "lucide-react"
+
+export default function ASMRStudio() {
+  const [isRecording, setIsRecording] = useState(false)
+  const [recordingTime, setRecordingTime] = useState(0)
+  const [isPremium, setIsPremium] = useState(false)
+  const [playingSounds, setPlayingSounds] = useState<Set<string>>(new Set())
+  const [dimLights, setDimLights] = useState(false)
+
+  
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold text-center mt-6">ASMR Studio 🎧</h1>
+      <p className="text-center text-muted-foreground">Твоята страница вече работи!</p>
+    </div>
+  )
+}
+
+  return (
+    <main style={{ padding: 20 }}>
+      <h1>Добре дошъл в ASMR Studio 🎧</h1>
+      <p>Режим: {isRecording ? 'Записва' : 'Спряно'}</p>
+      <p>Премиум: {isPremium ? 'Да' : 'Не'}</p>
+      <p>Време на запис: {recordingTime} секунди</p>
+      <button onClick={() => setIsRecording(!isRecording)}>
+        {isRecording ? 'Спри записа' : 'Започни запис'}
+      </button>
+    </main>
+  )
+}
+
+
+
 
 export default function ASMRStudio() {
   const [isRecording, setIsRecording] = useState(false)
